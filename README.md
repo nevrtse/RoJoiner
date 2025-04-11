@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="RoJoiner.png" alt="RoJoiner" width="128" height="128">
+  <img src="icons/RoJoiner.png" alt="RoJoiner" width="128" height="128">
 </p>
 
 <div align="center">
