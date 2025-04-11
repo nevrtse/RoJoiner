@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoJoiner</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 350px;
+      padding: 15px;
+      background-color: #2c2f33;
+      color: white;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    
+    .header img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    
+    h1 {
+      font-size: 18px;
+      text-align: center;
+      color: #7289da;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    textarea, input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #444;
+      background-color: #23272a;
+      color: white;
+      resize: none;
+    }
+    
+    textarea {
+      height: 80px;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+    
+    #paste-btn {
+      background-color: #5865f2;
+      color: white;
+    }
+    
+    #paste-btn:hover {
+      background-color: #4752c4;
+    }
+    
+    #join-btn {
+      background-color: #57f287;
+      color: #23272a;
+    }
+    
+    #join-btn:hover {
+      background-color: #45c46e;
+    }
+    
+    .error {
+      color: #ed4245;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+    
+    .instructions {
+      font-size: 12px;
+      margin-top: 15px;
+      color: #b9bbbe;
+    }
+    
+    .type-selector {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .type-btn {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #7289da;
+      background-color: transparent;
+      color: #7289da;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 4px;
+    }
+    
+    .type-btn.active {
+      background-color: #7289da;
+      color: white;
+    }
+    
+    #result {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #57f287;
+      display: none;
+    }
+    
+    .credit {
+      text-align: center;
+      font-size: 10px;
+      color: #72767d;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icon/RoJoiner.png" alt="RoJoiner Logo">
+    <h1>Roblox Server Joiner</h1>
+  </div>
+  
+  <div class="type-selector">
+    <div class="type-btn active" id="console-type">Code Console</div>
+    <div class="type-btn" id="script-type">Script Executor</div>
+  </div>
+  
+  <div class="input-group">
+    <label for="code-input">Collez votre code ici :</label>
+    <textarea id="code-input" placeholder="Roblox.GameLauncher.joinGameInstance(123456789, &quot;abcdef-12345-6789&quot;)"></textarea>
+  </div>
+  
+  <div class="error" id="error-message">Format de code invalide. Veuillez vérifier votre code.</div>
+  
+  <div class="buttons">
+    <button id="paste-btn">Coller depuis le presse-papiers</button>
+    <button id="join-btn">Rejoindre</button>
+  </div>
+  
+  <div id="result">Serveur trouvé ! Redirection en cours...</div>
+  
+  <div class="instructions">
+    <p><strong>Instructions :</strong></p>
+    <p>1. Collez le code fourni par le bot Discord</p>
+    <p>2. Cliquez sur "Rejoindre" pour accéder au serveur</p>
+  </div>
+  
+  <div class="credit">
+    Provided by Teapot
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
