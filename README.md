@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon/RoJoiner.png" alt="RoJoiner Logo" width="128" height="128">
+  <img src="icon/RoJoiner.png" alt="RoJoiner" width="128" height="128">
 </p>
 
 - **Description**
